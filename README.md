@@ -1,4 +1,4 @@
-## Event Storming Sample Concepts 
+## Event Storming and Domain Events Sample Concepts 
 
 Using Event Storming to design Domain Events
 
@@ -6,6 +6,8 @@ This project it's for demostration pourpose only with a very suggar implementati
 
 See my Event Storming Miro Board tool template: 
 https://miro.com/app/board/o9J_llBEmFk=/?invite_link_id=372692750770
+
+![Tania Storm Event Storming (4)](https://user-images.githubusercontent.com/8992182/159615273-a4ba59e3-302f-4406-91d7-411e3f6e7839.jpg)
 
 ## Built With
 * [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) - Web Framework
