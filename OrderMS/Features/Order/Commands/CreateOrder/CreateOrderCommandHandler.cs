@@ -25,15 +25,15 @@ namespace OrderMS.Features.Order.Commands.CreateOrder
 
         public async Task<OrderDto> Handle(CreateOrderCommand createOrderCommand, CancellationToken cancellationToken)
         {
-            Domain.Order Order = _mapper.Map<Domain.Order>(createOrderCommand);
+            Domain.Order order = _mapper.Map<Domain.Order>(createOrderCommand);
 
-            await _context.Orders.AddAsync(Order, cancellationToken);
+            await _context.Orders.AddAsync(order, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
 
             // Raising Event ...
-            await _mediator.Publish(new OrderCreatedEvent(Order.ClientId, Order.TotalValue, Order.RegistrationDate), cancellationToken);
+            await _mediator.Publish(new OrderCreatedEvent(order.ClientId, order.TotalValue, order.RegistrationDate), cancellationToken);
 
-            return _mapper.Map<OrderDto>(Order);
+            return _mapper.Map<OrderDto>(order);
         }
     }
 }

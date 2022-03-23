@@ -24,7 +24,7 @@ namespace OrderMS.Features.Order
         /// </summary>
         /// <param name="OrderId">Order ID</param>
         /// <returns>Order Details</returns>
-        [HttpGet("{OrderId}")]
+        [HttpGet("{OrderId:int}")]
         public async Task<IActionResult> GetOrderById([FromRoute] int OrderId)
         {
             OrderDto Order = await _mediator.Send(new GetOrderByIdQuery(OrderId));

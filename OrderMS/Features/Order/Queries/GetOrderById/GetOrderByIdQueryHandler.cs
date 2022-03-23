@@ -22,15 +22,15 @@ namespace OrderMS.Features.Order.Queries.GetOrderById
 
         public async Task<OrderDto> Handle(GetOrderByIdQuery request, CancellationToken cancellationToken)
         {
-            Domain.Order Order = await _context.Orders
+            Domain.Order order = await _context.Orders
                 .FindAsync(request.OrderId);
 
-            if (Order == null)
+            if (order == null)
             {
                 throw new RestException(HttpStatusCode.NotFound, "Order with given ID is not found.");
             }
 
-            return _mapper.Map<OrderDto>(Order);
+            return _mapper.Map<OrderDto>(order);
         }
     }
 }

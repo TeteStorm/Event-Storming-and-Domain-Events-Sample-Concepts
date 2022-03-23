@@ -6,8 +6,8 @@ namespace OrderMS.Features.Order.Commands.CreateOrder
     {
         public CreateOrderCommandValidator()
         {
-            RuleFor(Order => Order.TotalValue).NotNull();
-            RuleFor(Order => Order.ClientId).NotNull();
+            RuleFor(order => order.TotalValue).NotNull();
+            RuleFor(order => order.ClientId).NotNull();
         }
     }
 }
