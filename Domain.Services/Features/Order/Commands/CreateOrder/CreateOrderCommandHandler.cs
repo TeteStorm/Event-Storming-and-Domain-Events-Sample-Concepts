@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
+using Infra.Data;
 using MediatR;
-using OrderMS.Data;
-using OrderMS.Dto;
-using OrderMS.Features.Order.Events.OrderCreated;
+using Domain.Services.Dto;
+using Domain.Services.Features.Order.Events.OrderCreated;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OrderMS.Features.Order.Commands.CreateOrder
+namespace Domain.Services.Features.Order.Commands.CreateOrder
 {
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, OrderDto>
     {
@@ -25,7 +25,7 @@ namespace OrderMS.Features.Order.Commands.CreateOrder
 
         public async Task<OrderDto> Handle(CreateOrderCommand createOrderCommand, CancellationToken cancellationToken)
         {
-            Domain.Order order = _mapper.Map<Domain.Order>(createOrderCommand);
+            Core.Order order = _mapper.Map<Core.Order>(createOrderCommand);
 
             await _context.Orders.AddAsync(order, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);

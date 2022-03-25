@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EventStore.Client" Version="20.6.1" />
+  </ItemGroup>
+
 </Project>

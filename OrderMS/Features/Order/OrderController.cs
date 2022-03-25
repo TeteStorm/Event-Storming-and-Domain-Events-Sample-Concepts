@@ -1,7 +1,7 @@
-﻿using MediatR;
-using OrderMS.Dto;
-using OrderMS.Features.Order.Commands.CreateOrder;
-using OrderMS.Features.Order.Queries.GetOrderById;
+﻿using Domain.Services.Dto;
+using Domain.Services.Features.Order.Commands.CreateOrder;
+using Domain.Services.Features.Order.Queries.GetOrderById;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

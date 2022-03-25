@@ -1,11 +1,11 @@
-﻿using OrderMS.Infrastructure.Middlewares;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
+using Infra.Crosscutting;
 
 namespace OrderMS
 {
@@ -26,7 +26,7 @@ namespace OrderMS
 
         public static void UseErrorHandling(this IApplicationBuilder app)
         {
-            app.UseMiddleware<ErrorHandlingMiddleware>();
+            app.UseMiddleware<Infra.Crosscutting.Middlewares.ErrorHandlingMiddleware>();
         }
     }
 }

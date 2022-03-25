@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using OrderMS.Dto;
+using Domain.Services.Dto;
 
-namespace OrderMS.Features.Order.Queries.GetOrderById
+namespace Domain.Services.Features.Order.Queries.GetOrderById
 {
     public record GetOrderByIdQuery(int OrderId) : IRequest<OrderDto>;
 }

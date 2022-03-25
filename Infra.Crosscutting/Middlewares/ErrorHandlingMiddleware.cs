@@ -1,4 +1,5 @@
-﻿using OrderMS.Infrastructure.Exceptions;
+﻿
+using Infra.Crosscutting.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -6,7 +7,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace OrderMS.Infrastructure.Middlewares
+namespace Infra.Crosscutting.Middlewares
 {
     public class ErrorHandlingMiddleware
     {

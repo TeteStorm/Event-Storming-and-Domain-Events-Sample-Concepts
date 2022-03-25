@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OrderMS.Features.Order.Events.OrderCreated
+namespace Domain.Services.Features.Order.Events.OrderCreated
 {
     public class OrderCreatedLoggerHandler : INotificationHandler<OrderCreatedEvent>
     {

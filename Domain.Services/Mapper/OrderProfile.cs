@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using OrderMS.Domain;
-using OrderMS.Dto;
-using OrderMS.Features.Order.Commands.CreateOrder;
+using Domain.Core;
+using Domain.Services.Dto;
+using Domain.Services.Features.Order.Commands.CreateOrder;
 using System;
 
-namespace OrderMS.Infrastructure.Mapper
+namespace Domain.Services.Infrastructure.Mapper
 {
     public class OrderProfile : Profile
     {

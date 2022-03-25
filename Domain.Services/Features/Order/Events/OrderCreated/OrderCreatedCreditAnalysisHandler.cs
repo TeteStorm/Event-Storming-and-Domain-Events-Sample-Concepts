@@ -1,9 +1,8 @@
 ﻿using MediatR;
-using OrderMS.Infrastructure.Services;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OrderMS.Features.Order.Events.OrderCreated
+namespace Domain.Services.Features.Order.Events.OrderCreated
 {
     public class OrderCreatedCreditAnalysisHandler : INotificationHandler<OrderCreatedEvent>
     {

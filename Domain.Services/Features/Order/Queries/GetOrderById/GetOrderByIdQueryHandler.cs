@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
 using MediatR;
-using OrderMS.Data;
-using OrderMS.Dto;
-using OrderMS.Infrastructure.Exceptions;
+using Infra.Data;
+using Domain.Services.Dto;
 using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
+using Infra.Crosscutting.Exceptions;
 
-namespace OrderMS.Features.Order.Queries.GetOrderById
+namespace Domain.Services.Features.Order.Queries.GetOrderById
 {
     public class GetOrderByIdQueryHandler : IRequestHandler<GetOrderByIdQuery, OrderDto>
     {
@@ -22,7 +20,7 @@ namespace OrderMS.Features.Order.Queries.GetOrderById
 
         public async Task<OrderDto> Handle(GetOrderByIdQuery request, CancellationToken cancellationToken)
         {
-            Domain.Order order = await _context.Orders
+            Core.Order order = await _context.Orders
                 .FindAsync(request.OrderId);
 
             if (order == null)
