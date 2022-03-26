@@ -23,6 +23,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain.Services\Domain.Services.csproj" />
     <ProjectReference Include="..\Infra.Crosscutting\Infra.Crosscutting.csproj" />
-    <ProjectReference Include="..\Infra.Dsata\Infra.Data.csproj" />
+    <ProjectReference Include="..\Infra.Data\Infra.Data.csproj" />
   </ItemGroup>
 </Project>

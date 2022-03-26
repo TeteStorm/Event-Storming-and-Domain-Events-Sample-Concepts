@@ -15,6 +15,5 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
 	  <ProjectReference Include="..\Infra.Crosscutting\Infra.Crosscutting.csproj" />
-	  <ProjectReference Include="..\Infra.Dsata\Infra.Data.csproj" />
 	</ItemGroup>
 </Project>
